@@ -7,6 +7,30 @@ import time
 # Placeholder for the notification logic
 st.title('Basketball Injury Notification System')
 
+# List of players and their teams to monitor
+players_to_monitor = [
+    {'name': 'LeBron James', 'team': 'Los Angeles Lakers'},
+    {'name': 'Kevin Durant', 'team': 'Phoenix Suns'},
+    {'name': 'Stephen Curry', 'team': 'Golden State Warriors'},
+    {'name': 'Giannis Antetokounmpo', 'team': 'Milwaukee Bucks'},
+    {'name': 'Kawhi Leonard', 'team': 'Los Angeles Clippers'},
+    {'name': 'James Harden', 'team': 'Philadelphia 76ers'},
+    {'name': 'Luka Dončić', 'team': 'Dallas Mavericks'},
+    {'name': 'Damian Lillard', 'team': 'Portland Trail Blazers'},
+    {'name': 'Anthony Davis', 'team': 'Los Angeles Lakers'},
+    {'name': 'Jayson Tatum', 'team': 'Boston Celtics'}
+]
+
+# Display the players being monitored
+st.subheader('Monitoring Players')
+for player in players_to_monitor:
+    st.write(f"{player['name']} - {player['team']}")
+
+# Update the search status
+st.write('Currently searching for updates on the following players:')
+searching_players = [player['name'] for player in players_to_monitor]
+st.write(', '.join(searching_players))
+
 # Here you would implement the logic to fetch and display notifications
 
 def check_player_health():
